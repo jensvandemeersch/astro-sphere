@@ -1,11 +1,15 @@
-import { defineConfig } from "astro/config"
-import mdx from "@astrojs/mdx"
-import sitemap from "@astrojs/sitemap"
-import tailwind from "@astrojs/tailwind"
-import solidJs from "@astrojs/solid-js"
+import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
+import mdx from '@astrojs/mdx';
+import solidJs from '@astrojs/solid-js';
 
-// https://astro.build/config
 export default defineConfig({
-  site: "https://studiobinnenkant.pages.dev",
-  integrations: [mdx(), sitemap(), solidJs(), tailwind({ applyBaseStyles: false })],
-})
+  site: "https://studio-binnenkant.pages.dev",
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    mdx(),
+    solidJs(),
+  ],
+});
